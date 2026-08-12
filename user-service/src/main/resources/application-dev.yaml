@@ -1,0 +1,12 @@
+chle:
+  db:
+    host: 192.168.139.130
+    pw: 123456
+spring:
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        server-addr: 192.168.137.1:8848
+        username: nacos
+        password: gAnAc02p469P

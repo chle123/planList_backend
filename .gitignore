@@ -1,0 +1,93 @@
+# ====================
+# 编译产物 (Compiled files)
+# ====================
+*.class                          # 所有Java编译后的字节码文件[reference:2][reference:3]
+*.jar
+*.war
+*.ear                            # Java归档文件[reference:4][reference:5]
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# ====================
+# 构建工具目录 (Build tool directories)
+# ====================
+# Maven
+target/                          # Maven的默认输出目录[reference:6][reference:7]
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties           # Maven相关临时文件[reference:8][reference:9]
+
+# Gradle
+.gradle/
+build/                           # Gradle的默认输出目录[reference:10]
+gradle-app.setting
+
+# ====================
+# IDE 配置文件 (IDE configuration files)
+# ====================
+# IntelliJ IDEA
+.idea/                           # IDE项目配置目录[reference:11][reference:12]
+*.iml                            # IDEA模块文件[reference:13]
+*.iws
+*.ipr
+
+# Eclipse
+.settings/
+.project
+.classpath
+.factorypath
+.springBeans                     # Spring Tool Suite 文件[reference:14][reference:15]
+.sts4-cache/                     # Spring Tool Suite 4 缓存[reference:16][reference:17]
+.metadata/
+bin/
+
+# VS Code
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ====================
+# 日志与临时文件 (Logs and temporary files)
+# ====================
+*.log
+logs/
+*.tmp
+*.swp
+*.swo
+*~
+
+# ====================
+# 操作系统特定文件 (OS-specific files)
+# ====================
+.DS_Store                      # macOS[reference:18][reference:19]
+Thumbs.db                      # Windows[reference:20]
+
+# ====================
+# 环境变量与敏感信息 (Environment & sensitive data)
+# ====================
+.env
+.env.local
+application-local.properties   # 本地配置文件[reference:21]
+application-dev.properties
+
+# ====================
+# 其他 (Others)
+# ====================
+# BlueJ 文件
+*.ctxt                          # [reference:22][reference:23]
+# Java 虚拟机崩溃日志
+hs_err_pid*                     # [reference:24][reference:25]
+# Maven Wrapper 生成的Jar包 (通常建议忽略)
+.mvn/wrapper/maven-wrapper.jar  # [reference:26]

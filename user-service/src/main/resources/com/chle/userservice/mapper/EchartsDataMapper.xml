@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chle.userservice.mapper.EchartsDataMapper">
+
+    <resultMap id="BaseResultMap" type="com.chle.userservice.domain.EchartsData">
+            <id property="id" column="id" />
+            <result property="dataTime" column="data_time" />
+            <result property="completionRate" column="completion_rate" />
+            <result property="userId" column="user_id" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,data_time,completion_rate,user_id
+    </sql>
+</mapper>

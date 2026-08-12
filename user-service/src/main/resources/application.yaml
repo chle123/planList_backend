@@ -1,0 +1,33 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}# Nacos 服务器地址
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://${chle.db.host}:3306/plandb?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ${chle.db.pw}
+mybatis-plus:
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      update-strategy: not_null
+      id-type: auto
+logging:
+  level:
+    com.chle.userservice.mapper: debug
+chle:
+  jwt:
+    location: classpath:ptool.jks
+    alias: ptool
+    password: ptool123
+    tokenTTL: 30m
