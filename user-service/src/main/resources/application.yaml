@@ -14,6 +14,14 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: ${chle.db.pw}
+  data:
+    redis:
+      host: 192.168.139.130
+      port: 6379
+      database: 0
+      timeout: 5000ms
+
+
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
@@ -22,6 +30,7 @@ mybatis-plus:
     db-config:
       update-strategy: not_null
       id-type: auto
+
 logging:
   level:
     com.chle.userservice.mapper: debug

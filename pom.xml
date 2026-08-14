@@ -27,6 +27,8 @@
         <mysql.version>9.7.0</mysql.version>
         <org.projectlombok.version>1.18.30</org.projectlombok.version>
         <spring-cloud-starter-alibaba-nacos-discovery>2023.0.0.0-RC1</spring-cloud-starter-alibaba-nacos-discovery>
+        <spring-boot-starter-data-redis>3.2.7</spring-boot-starter-data-redis>
+        <spring-boot-starter-aop>3.2.7</spring-boot-starter-aop>
     </properties>
 
     <!-- 依赖版本锁定（子模块继承） -->
@@ -70,6 +72,17 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>${spring-cloud-starter-alibaba-nacos-discovery}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot-starter-data-redis}</version>
+            </dependency>
+<!--            aop代理-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring-boot-starter-aop}</version>
             </dependency>
         </dependencies>
 
