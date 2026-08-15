@@ -1,4 +1,4 @@
-package com.chle.userservice.utils;
+package com.chle.common.utils;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import org.apache.ibatis.reflection.MetaObject;

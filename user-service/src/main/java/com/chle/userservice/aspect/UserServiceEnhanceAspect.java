@@ -36,8 +36,6 @@ public class UserServiceEnhanceAspect {
     private final JwtProperties jwtProperties;
     private final UserMapper userMapper;
 
-    // 常量全部移至 AppConstants.User，此处删除原定义
-
     @Around("execution(* com.chle.userservice.service.impl.UserServiceImpl.login(..))")
     public Object enhanceLogin(ProceedingJoinPoint pjp) throws Throwable {
         LoginFormDTO dto = (LoginFormDTO) pjp.getArgs()[0];

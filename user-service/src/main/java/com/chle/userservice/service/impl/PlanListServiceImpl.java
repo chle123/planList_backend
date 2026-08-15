@@ -251,7 +251,9 @@ public class PlanListServiceImpl extends ServiceImpl<PlanListMapper, PlanList>
                 .eq(PlanList::getUserId, userId)
                 .lt(PlanList::getDeadLine, now)
                 .ne(PlanList::getStatus, PlanStatus.TIME_OUT.getValue())
+                .ne(PlanList::getStatus, PlanStatus.COMPLETE.getValue())
                 .set(PlanList::getStatus, PlanStatus.TIME_OUT.getValue())
+
         );
 
         // 更新进行中（start <= now < deadline 且 status != ONGOING 且 status != COMPLETED）
